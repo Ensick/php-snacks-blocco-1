@@ -46,17 +46,22 @@ $posts = [
     ],
 ];
 
-var_dump($posts);
+var_dump(array_keys($posts)[0]);
 
-for($i = 0; $i < count($posts['10/01/2019']); $i++){
+$chiaviArray = array_keys($posts);
 
-   echo $posts['10/01/2019'][$i]['title'] .' '. '<br>';
-   echo $posts['10/01/2019'][$i]['author'].' ' . '<br>';
-   echo $posts['10/01/2019'][$i]['text'].' ' . '<br><br>';
-   
+for($i = 0; $i < count($chiaviArray); $i++){
+    $chiave = $chiaviArray[$i];
+
+    for($y = 0; $y < count($posts[$chiave]); $y++){
+        echo $chiave .'<br>';
+        echo $posts[$chiave][$y]['title'] .' '. '<br>';
+        echo $posts[$chiave][$y]['author'].' ' . '<br>';
+        echo $posts[$chiave][$y]['text'].' ' . '<br><br>';
+    } 
 }
 
-for($i = 0; $i < count($posts['10/02/2019']); $i++){
+/* for($i = 0; $i < count($posts['10/02/2019']); $i++){
 
     echo $posts['10/02/2019'][$i]['title'] .' '. '<br>';
     echo $posts['10/02/2019'][$i]['author'].' ' . '<br>';
@@ -70,6 +75,6 @@ for($i = 0; $i < count($posts['15/05/2019']); $i++){
     echo $posts['15/05/2019'][$i]['author'].' ' . '<br>';
     echo $posts['15/05/2019'][$i]['text'].' ' . '<br><br>';
     
- }
+ } */ 
 ?>
 

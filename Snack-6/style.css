@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.teachers{
+
+    width: 250px;
+    height: 150px;
+    background-color: red;
+    text-align: center;
+}
+
+.pm{
+
+    width: 250px;
+    height: 150px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
