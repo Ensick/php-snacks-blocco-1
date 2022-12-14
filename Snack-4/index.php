@@ -7,13 +7,19 @@
 
 $arrayNumeriCasuali = [];
 
-for($i = 0; $i < 10; $i++){
+for($i = 0; count($arrayNumeriCasuali) < 15; $i++){
 
    $myNewInt = rand(1 , 100);
    
-   $arrayNumeriCasuali[] = $myNewInt;
+   if(!in_array($myNewInt,$arrayNumeriCasuali)){
+
+      $arrayNumeriCasuali[] = $myNewInt;
+   }
+   
 }
 
 var_dump($arrayNumeriCasuali);
+
+
 
 ?>
